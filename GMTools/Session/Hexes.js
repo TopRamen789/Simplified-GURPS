@@ -4,88 +4,13 @@ var iterator = 0;
 $(document).ready(function () {
 
     var hexSize = 10;
-    var canvas = $('#canvas')[0];
+    var canvas = $('#HexCanvas')[0];
     var clearContext = canvas.getContext("2d");
-
-    //var requestAnimationFrame = window.requestAnimationFrame ||
-    //                            window.mozRequestAnimationFrame ||
-    //                            window.webkitRequestAnimationFrame ||
-    //                            window.msRequestAnimationFrame;
-    //requestAnimationFrame(drawHexGrid(canvas, hexSize));
-
     var canvasXSize = canvas.width;
     var canvasYSize = canvas.height;
 
     hexGridGeneration(canvas, hexSize, canvasXSize, canvasYSize);
     drawHexGrid(canvas, hexSize);
-
-    $(canvas).bind('mousewheel DOMMouseScroll', function (event) {
-        event.preventDefault();
-        var zoomX = event.pageX - this.offsetLeft;
-        var zoomY = event.pageY - this.offsetTop;
-        //var extraOffsetX = 1.75;
-        //var extraOffsetY = .35;
-
-        if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-            //Zoom in
-            if (hexSize < 120) {
-                hexSize += 10;
-                //Need to redraw based on center of mouse coordinates
-                hexGridGeneration(canvas, hexSize, canvasXSize, canvasYSize);
-                drawHexGrid(canvas, hexSize);
-            }
-        }
-        else {
-            //Zoom out
-            if (hexSize > 10) {
-                hexSize -= 10;
-                hexGridGeneration(canvas, hexSize, canvasXSize, canvasYSize);
-                drawHexGrid(canvas, hexSize);
-            }
-        }
-    });
-
-    $(canvas).click(function (e) {
-        var clickedX = e.pageX - this.offsetLeft;
-        var clickedY = e.pageY - this.offsetTop;
-        var context = canvas.getContext('2d');
-        var a = (Math.PI * 2) / 6;
-
-        var extraOffsetX = 1.75;
-        var extraOffsetY = .35;
-
-        for (var i = 0; i < hexGridObj.length; i++) {
-            if (clickedX < hexGridObj[i].right + (this.offsetLeft * extraOffsetX) && clickedX > hexGridObj[i].left + (this.offsetLeft * extraOffsetX) &&
-                clickedY < hexGridObj[i].bottom + (this.offsetTop * extraOffsetY) && clickedY > hexGridObj[i].top + (this.offsetTop * extraOffsetY)) {
-                //alert('Coords clicked: ' + hexGridObj[i].xCoordinate + ', ' + hexGridObj[i].yCoordinate);
-                var a = (Math.PI * 2) / 6;
-                context.beginPath();
-                //this might also be good for the conditional statement above..
-                context.moveTo(hexGridObj[i].xActualCoordinate, hexGridObj[i].yActualCoordinate);
-                context.moveTo(hexSize * Math.cos(a) + hexGridObj[i].xActualCoordinate, hexSize * Math.sin(a) + hexGridObj[i].yActualCoordinate);
-                for (var x = 1; x < 8; x++) {
-                    context.lineTo(hexSize * Math.cos(a * x) + hexGridObj[i].xActualCoordinate, hexSize * Math.sin(a * x) + hexGridObj[i].yActualCoordinate);
-                }
-
-                /*Accidental, but maybe useful one day?
-                context.moveTo(hexGridObj[i].xSpacing, hexGridObj[i].ySpacing);
-                for (var x = 1; x < 6; x++) {
-                    context.lineTo(hexSize * Math.cos(a * i), hexSize * Math.sin(a * i));
-                }
-                */
-
-                //Makes square selection around hex
-                //context.moveTo(hexGridObj[i].right, hexGridObj[i].top);
-                //context.lineTo(hexGridObj[i].left, hexGridObj[i].top);
-                //context.lineTo(hexGridObj[i].left, hexGridObj[i].bottom);
-                //context.lineTo(hexGridObj[i].right, hexGridObj[i].bottom);
-                //context.lineTo(hexGridObj[i].right, hexGridObj[i].top);
-                context.strokeStyle = "rgba(255, 0, 0, 1)";
-                context.stroke();
-                context.strokeStyle = "rgba(0, 0, 0, 1)";
-            }
-        }
-    });
 });
 
 var drawHexagon = function(context, x, y, radius, startAngle, anticlockwise) {
@@ -138,7 +63,6 @@ function hexGridGeneration(canvas, radius, canvasXSize, canvasYSize) {
             xIncrement += horizontalSpacing;
 
             var hex = {};
-            //hex.radius = radius;
 
             hex.left = xIncrement - radius;
             hex.top = yIncrement - radius;
@@ -177,7 +101,93 @@ function drawHexGrid(canvas, radius) {
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
     for (var i = 0; i < hexGridObj.length; i++) {
-        var context = canvas.getContext("2d");
         drawPlainHex(context, hexGridObj[i].xActualCoordinate, hexGridObj[i].yActualCoordinate, radius);
     }
 }
+
+function drawHexZoom(canvas, event, radius)
+{
+	var zoomX = event.pageX;
+	var zoomY = event.pageY;
+	var context = canvas.getContext("2d");
+	//context.clearRect()
+	for(var i = 0; i < hexGridObj.length; i++)
+	{
+		if (zoomX < hexGridObj[i].right && zoomX > hexGridObj[i].left && zoomY < hexGridObj[i].bottom && zoomY > hexGridObj[i].top)
+		{
+			
+		}
+	}
+}
+function getRelativePosition() {
+	var x = 0, y = 0;
+	var layoutElement = $('#HexCanvas')[0];
+    if (layoutElement.offsetParent) {
+        do {
+            x += layoutElement.offsetLeft;
+            y += layoutElement.offsetTop;
+        } while (layoutElement = layoutElement.offsetParent);
+        
+        return { x: x, y: y };
+    }
+}
+
+$(document).ready(function() {
+	var hexSize = 10;
+	var canvas = $('#HexCanvas')[0];
+	var clearContext = canvas.getContext("2d");
+	var canvasXSize = canvas.width;
+	var canvasYSize = canvas.height;
+
+	$(canvas).bind('mousewheel DOMMouseScroll', function (e) {
+        e.preventDefault();
+		var offset = getRelativePosition();
+        var zoomX = e.pageX - offset.x;
+        var zoomY = e.pageY - offset.y;
+
+        if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            //Zoom in
+            if (hexSize < 120) {
+                hexSize += 10;
+                //Need to redraw based on center of mouse coordinates
+                hexGridGeneration(canvas, hexSize, canvasXSize, canvasYSize);
+                drawHexGrid(canvas, hexSize);
+            }
+        }
+        else {
+            //Zoom out
+            if (hexSize > 10) {
+                hexSize -= 10;
+                hexGridGeneration(canvas, hexSize, canvasXSize, canvasYSize);
+                drawHexGrid(canvas, hexSize);
+            }
+        }
+    });
+
+    $(canvas).click(function (e) {	
+		var offset = getRelativePosition();
+        var clickedX = e.pageX - offset.x;
+        var clickedY = e.pageY - offset.y;
+        var context = canvas.getContext('2d');
+        var a = (Math.PI * 2) / 6;
+
+        var extraOffsetX = 1.75;
+        var extraOffsetY = .35;
+
+        for (var i = 0; i < hexGridObj.length; i++) {
+		//Square selection, want to be able to limit to hex, so we don't select multiple hexes due to square shape.
+			if (clickedX < hexGridObj[i].right && clickedX > hexGridObj[i].left && clickedY < hexGridObj[i].bottom && clickedY > hexGridObj[i].top) {
+                context.beginPath();
+				//alert(hexGridObj[i].xHexCoordinate + ", " + hexGridObj[i].yHexCoordinate);
+                context.moveTo(hexSize * Math.cos(a) + hexGridObj[i].xActualCoordinate, hexSize * Math.sin(a) + hexGridObj[i].yActualCoordinate);
+                for (var x = 1; x < 8; x++) {
+                    context.lineTo((hexSize + 1) * Math.cos(a * x) + hexGridObj[i].xActualCoordinate, (hexSize + 1) * Math.sin(a * x) + hexGridObj[i].yActualCoordinate);
+                }
+				
+                context.strokeStyle = "rgba(255, 0, 0, 1)";
+                context.stroke();
+                context.strokeStyle = "rgba(0, 0, 0, 1)";
+            }
+        }
+    });
+});
