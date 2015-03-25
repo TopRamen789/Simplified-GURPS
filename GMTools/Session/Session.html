@@ -10,8 +10,7 @@
     <!-- Don't know if I need hexbin.v0.min.js -->
     <script src="..\..\scripts.js" type="text/javascript"></script>
     <script src="Hexes.js" type="text/javascript"></script>
-	<script src="hexgrid.js" type="text/javascript"></script>
-    <!--<script src="SessionTest.js" type="text/javascript"></script>-->
+    <script src="JavaScript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -29,12 +28,16 @@
 					Welcome!
 				</h1>
                 <div class="ui divider"></div>
-                <canvas id="HexCanvas" width="1000px" height="550px"></canvas>
-				<canvas id="HexCanvas2" width="1000px" height="550px"></canvas>
-				<script>
-					var hexagonGrid = new HexagonGrid("HexCanvas2", 50);
-					hexagonGrid.drawHexGrid(7, 10, 50, 50, true);
-				</script>
+                <div id="canvasWrapper">
+                    <canvas id="HexCanvas" width="1000" height="550">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                </div>
+                <!--<canvas id="HexCanvas2" width="1000" height="550"></canvas>
+                <script>
+                    var hexagonGrid = new HexagonGrid("HexCanvas2", 50);
+                    hexagonGrid.drawHexGrid(7,10,50,50,true);
+                </script>-->
                 <div class="ui divider"></div>
                 <div class="ui feed">
                     <div class="event">
