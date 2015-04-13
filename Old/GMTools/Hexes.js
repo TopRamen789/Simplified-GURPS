@@ -232,9 +232,6 @@ $(document).ready(function () {
 
 	$(document).keydown(onKeyDown);
 
-    //The grid moves like I want it to,
-    //now I need to make it so that it clears the context properly
-    //and make it add on extra hexes when I move far enough in a direction.
 	function onKeyDown(event) {
 	    var context = canvas.getContext("2d");
 	    var offset = getRelativePosition();

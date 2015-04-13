@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SLURPS</title>
+	<link href="..\..\Semantic-UI-1.8.1\dist\semantic.min.css" type="text/css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="..\..\Semantic-UI-1.8.1\dist\semantic.min.js" type="text/javascript"></script>
+    <script src="..\..\scripts.js" type="text/javascript"></script>
+    <script src="import.js" type="text/javascript"></script>
+    <link href="..\ToolbarStyle.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+	<div class="ui fixed inverted menu">
+		<div class="container">
+			<div class="title item">
+				<b>Home</b>
+			</div>
+		</div>
+	</div>
+	<div class="ui center aligned stackable grid">
+		<div class="center aligned twelve wide column">
+			<div class="ui segment">
+				<h1 class="header segment">
+					Welcome!
+				</h1>
+                <div class="ui divider"></div>
+                <div class="ui grid">
+                    <div class="ui two wide column">
+                        <!--Placeholder toolbar-->
+                        <div id="toolbar">
+                            <div class="ui vertical icon menu">
+                                <a class="active blue item" data-tab="0">
+                                    <i class="big users icon" data-content="NPCs"></i>
+                                </a>
+                                <a class="teal item" data-tab="1">
+                                    <i class="big flag icon" data-content="Cities"></i>
+                                </a>
+                                <a class="red item" data-tab="2">
+                                    <i class="big bug icon" data-content="Encounters"></i>
+                                </a>
+                                <a class="orange item" data-tab="3">
+                                    <i class="big alarm icon" data-content="Events"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fourteen wide column">
+                        <div class="ui left action input">
+                            <!--
+                                Do not use Semantic-UI's examples for action inputs
+                                They use a button tag, use their div and set the class
+                                to a button
+                            -->
+                            <div class="ui teal icon button">
+                                <i class="file image outline icon"></i>
+                            </div>
+                            <input type="text" placeholder="Image name here..." />
+                        </div>
+                        <div class="ui divider"></div>
+                        <img class="ui image" src="image.png" />
+                    </div>
+                    <div class="ui divider"></div>
+                    <div id="toolbarTabs">
+                        <div class="ui active tab" data-tab="0"></div>
+                        <div class="ui tab" data-tab="1"></div>
+                        <div class="ui tab" data-tab="2"></div>
+                        <div class="ui tab" data-tab="3"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

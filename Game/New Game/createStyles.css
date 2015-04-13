@@ -1,0 +1,10 @@
+﻿.disadvantages .ui.toggle.checkbox input[type="checkbox"]:checked ~ .box,
+.disadvantages .ui.toggle.checkbox input[type="checkbox"]:checked ~ label
+{
+  color: #d95c5c;
+}
+.disadvantages .ui.toggle.checkbox input[type="checkbox"]:checked ~ .box:before,
+.disadvantages .ui.toggle.checkbox input[type="checkbox"]:checked ~ label:before
+ {
+  background-color: #d95c5c;
+}
