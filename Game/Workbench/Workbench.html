@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SLURPS</title>
+	<link href="..\..\Semantic-UI-1.8.1\dist\semantic.min.css" type="text/css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="..\..\Semantic-UI-1.8.1\dist\semantic.min.js" type="text/javascript"></script>
+    <script src="..\..\semanticScripts.js" type="text/javascript"></script>
+    <script src="Maps\Hexes.js" type="text/javascript"></script>
+    <!--Thinking Sigma doesn't play nicely with Semantic...-->
+    <script src="Planner/release/sigma.min.js"></script>
+    <script src="Planner/release/plugins/sigma.parsers.json.min.js"></script>
+    <!--
+    <link href="workbenchStyles.css" type="text/css" rel="stylesheet" />
+    -->
+</head>
+
+<!--class="darkGray"-->
+<body>
+	<div class="ui fixed inverted menu">
+		<div class="container">
+			<a class="title item" href="../../Home.html">
+				<b>Home</b>
+			</a>
+		</div>
+	</div>
+	<div class="ui center aligned stackable grid">
+		<div class="twelve wide column">
+			<div class="ui gray segment">
+				<h1 class="header segment">
+					Workbench
+				</h1>
+                <div class="ui divider"></div>
+                <!--<div class="ui grid">
+                    <div class="row">-->
+                        <!--id="leftColumn"-->
+                        <!--<div class="four wide column">-->
+                            <!--This will take some styling to get done..-->
+                            <!--I could just style this like the New Game page...-->
+                            <!--<div class="ui fluid vertical menu">-->
+                            <!--<div class="ui vertical fluid side-tabs tabular menu">-->
+                <div class="ui top attached fluid six item labeled icon tabular menu">
+                    <a class="item active" data-tab="first">
+                        <i class="world icon"></i>
+                        Worlds
+                    </a>
+                    <a class="item" data-tab="second">
+                        <i class="table icon"></i>
+                        Maps
+                    </a>
+                    <a class="item" data-tab="third">
+                        <i class="bug icon"></i>
+                        Encounters
+                    </a>
+                    <a class="item" data-tab="fourth">
+                        <i class="sitemap icon"></i>
+                        Planner
+                    </a>
+                    <a class="item" data-tab="fifth">
+                        <i class="book icon"></i>
+                        History
+                    </a>
+                    <a class="item" data-tab="sixth">
+                        <i class="share alternate icon"></i>
+                        Networks
+                    </a>
+                </div>
+                <!--</div>-->
+                <!--id="righttColumn"-->
+                <!--<div class="ten wide column">-->
+                <!--leftside attached-->
+                <div class="ui active tab bottom attached segment" data-tab="first">
+                    <img src="../../image.png" width="700px" height="700px"/>
+                    <div style="height:250px"></div>
+                </div>
+                <div class="ui tab bottom attached segment" data-tab="second">
+                    <canvas id="HexCanvas" width="1000" height="550">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                    <div style="height:250px"></div>
+                </div>
+                <div class="ui tab bottom attached segment" data-tab="third">
+                    <table class="ui table">
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    Commonly used Encounters
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Type</th>
+                                <th>Name</th>
+                                <th>Point Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Common Encounter</td>
+                                <td>Goblin</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Epic Encounter</td>
+                                <td>Dragon</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td>Middle-Class</td>
+                                <td>Commoner</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>High-Class</td>
+                                <td>Nobleman</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="../Toolbox/Encounters/Encounters.html" class="ui teal labeled icon button">
+                        <i class="bug icon"></i>
+                        Add Encounter
+                    </a>
+                    <div style="height:250px"></div>
+                </div>
+                <div class="ui tab bottom attached segment" data-tab="fourth">
+                    <div id="container"></div>
+                    <!--style="height:500px;"-->
+                    <script>
+                        sigma.parsers.json('Planner/data.json', {
+                            container: 'container',
+                            settings: {
+                                defaultNodeColor: '#ec5148'
+                            }
+                        });
+                    </script>
+                    <div style="height:250px"></div>
+                </div>
+                <div class="ui tab bottom attached left aligned segment" data-tab="fifth">
+                    <h3 class="ui header">
+                        History of Orgrimmar
+                    </h3>
+                        Orgrimmar has been the central hub of the orcish community since the end of the Third War. The city was founded by Thrall and named after his friend and mentor, the former Warchief Orgrim Doomhammer. It is a fortified complex guarded by stout walls, massive gates and tall towers. The mountainous ranges of northern Durotar form a natural barrier to the rear of the fortress, and parts of the complex are carved into the mountain itself.
+                        Orgrimmar is openly hospitable to all members of the Horde and is an important center of commerce. Visitors may fly into the city by way of zeppelin or wyvern, or simply walk through the fortress’s main gates.[2]
+                        Thrall led the orcs to the continent of Kalimdor, where they founded a new homeland with the help of their tauren brethren. Naming their new land Durotar after Thrall's father Durotan, the orcs settled down to rebuild their once-glorious society. The demonic curse on their kind ended, the Horde changed from a bloodthirsty, warlike juggernaut into more of a loose coalition, dedicated to survival and prosperity rather than conquest. Aided by the noble tauren and the cunning trolls of the Darkspear tribe, Thrall and his orcs looked forward to a new era of peace in their own land. From there, they began the creation of the great warrior city, Orgrimmar.
+                        Today, Orgrimmar lies at the base of a mountain between Durotar and Azshara. A warrior city indeed, it is home to countless amounts of orcs, trolls, and tauren. An increasing amount of Forsaken are now joining the city, as well as the blood elves who have recently been accepted into the Horde.
+                        The city was attacked by the Scourge during the duel between Thrall and Garrosh. The duel had to stopped as orcs and some others leaders of the Horde went to defend the city.
+                        During the War against the Lich King, Putress betrayed Forsaken. Sylvanas and her loyal Forsaken took the refuge in Orgrimmar. From there, Sylvanas, Thrall and horde adventurers returned and liberated Undercity. During that time, all merchants and services have been shut down as the Warchief prepared for an unavoidable conflict.
+                        As whole Azeroth fell into the mists of Emerald Nightmare, so did Orgrimmar with its citizens.
+                        <br /><h4 class="ui header">People and culture</h4><br />
+                        Although orcs comprise the majority of the city’s inhabitants, there is a strong troll presence here as well, primarily in the Valley of Spirits. With the recent change in leadership, Garrosh Hellscream has refurbished Orgrimmar's rustic and wooden architecture into reinforced steel and iron. The Horde races also use Orgrimmar as a center of trade, not only of physical goods, but ideas as well. For example, a number of different holidays are celebrated here, including a tauren festival for the winter solstice and a number of others
+                        The most significant figure in Orgrimmar was undoubtedly Warchief Garrosh Hellscream himself before his defeat during the Siege of Orgrimmar.
+                    <div style="height:250px"></div>
+                </div>
+                <div class="ui tab bottom attached segment" data-tab="sixth">
+                    sixth
+                    <div style="height:250px"></div>
+                </div>
+                    <!--</div>-->
+                <br />
+                <div class="ui grid">
+                    <div class="two column row">
+                        <div class="left aligned column">
+                            <a id="cancel" class="ui labeled icon huge secondary button">
+                                <i class="remove icon"></i>
+                                Cancel
+                            </a>
+                        </div>
+                        <div class="right aligned column">
+                            <a class="ui labeled icon huge primary button" href="..\Game.html">
+                                <i class="checkmark icon"></i>
+                                Save
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="cancelModal" class="ui basic modal">
+                    <div class="content">
+                        Are you sure? Any unsaved changes will be lost...
+                    </div>
+                    <div class="actions">
+                        <div class="ui two fluid buttons">
+                            <div class="ui red basic inverted labeled icon button">
+                                <i class="remove icon"></i>
+                                No
+                            </div>
+                            <a class="ui green basic inverted labeled icon button" href="..\Game.html">
+                                <i class="checkmark icon"></i>
+                                Yes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

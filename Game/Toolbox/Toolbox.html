@@ -5,7 +5,7 @@
 	<link href="..\..\Semantic-UI-1.8.1\dist\semantic.min.css" type="text/css" rel="stylesheet"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="..\..\Semantic-UI-1.8.1\dist\semantic.min.js" type="text/javascript"></script>
-    <script src="..\..\scripts.js" type="text/javascript"></script>
+    <script src="..\..\semanticScripts.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -20,26 +20,25 @@
 		<div class="center aligned twelve wide column">
 			<div class="ui segment">
 				<h1 class="header segment">
-					Welcome!
+					Toolbox
 				</h1>
                 <div class="ui divider"></div>
                 <div class="ui grid">
+                    <div class="one column row">
+                        <div class="column">
+                            *Some of these tools can work together, but note that they were designed to be exclusive.
+                        </div>
+                    </div>
+                    Do not feel like you must use a tool if it can interact with other tools.
                     <div class="two column row">
                         <div class="column">
                             <h1 class="ui dividing header">
                                 <i class="world icon"></i>
                                 Worlds
                             </h1>
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
+                            The Worlds tool allows GMs to build large scale maps, describing generally what their game's landscape looks like.
+                            <br />It could be a fantasy world with continents and oceans with differing planes of existence and a complex underdark.
+                            <br />Or it could be a deep Sci-Fi universe detailing each solar system within a galaxy.
                             <br /><br />
                             <div class="ui toggle checkbox">
                                 <input type="checkbox" />
@@ -51,16 +50,9 @@
                                 <i class="table icon"></i>
                                 Maps
                             </h1>
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
+                            The Maps tool allows GMs to detail specific environments, whether it be the Tomb of Horrors or The Starship Enterprise.
+                            Note that maps are drawn in a hex grid format.
+                            <br />If you so desire, you can also use the maps tool to reference places created in the Worlds tool.
                             <br /><br />
                             <div class="ui toggle checkbox">
                                 <input type="checkbox" />
@@ -74,16 +66,23 @@
                                 <i class="bug icon"></i>
                                 Encounters
                             </h1>
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Descript. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
-                            lorem ipsum lorem ipsum lorem ipsum
+                            The Encounters tool allows GMs to prep enemies for a game.
+                            <br />When the GM is done preparing they can whip up a few fast enemies whenever needed.
+                            <br />This tool also includes some pre-made enemies that might look familiar...
+                            <br /><br />
+                            <div class="ui toggle checkbox">
+                                <input type="checkbox" />
+                                <label>Include this tool</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h1 class="ui dividing header">
+                                <i class="sitemap icon"></i>
+                                Planner
+                            </h1>
+                            The Planner tool allows GMs to prepare for contingencies in a game.
+                            <br />It helps GMs plan for multiple possibilities when players make decisions.
+                            <br />It also helps GMs plan events for when players enter a town or a specific zone/area.
                             <br /><br />
                             <div class="ui toggle checkbox">
                                 <input type="checkbox" />
@@ -92,11 +91,71 @@
                         </div>
                     </div>
                     <div class="two column row">
-                        <div class="column"></div>
+                        <!--
+                            Not feeling as big on the "history" tool
+                            Might be able to make it better if it didn't cover just history, but maybe
+                            just general details about the world.
+                            Races, Infrastructure, History, Culture, explaining Magic/Technologic impact on Society etc.
+                            But that could be something associated with the World tool, World description?
+                        -->
+                        <div class="column">
+                            <h1 class="ui dividing header">
+                                <i class="book icon"></i>
+                                History
+                            </h1>
+                            The History tool allows GMs to detail the history of their world.
+                            <br />The history tool lets GMs take notes on places or events that have happened.
+                            <br />This tool can be used with the Worlds tool to connect historical data to places in the world.
+                            <br /><br />
+                            <div class="ui toggle checkbox">
+                                <input type="checkbox" />
+                                <label>Include this tool</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h1 class="ui dividing header">
+                                <i class="share alternate icon"></i>
+                                Networks
+                            </h1>
+                            The Networks tool allows GMs to create organizations such as social, political, cultural, or religious groups.
+                            <br />The Networks tool also has a variety of details you can use to characterize a network.
+                            Such as the socio-economic status of the group, positions within a hierarchy, or even regular contact information.
+                            <!--*Ahem* Could be used to satisfy PC contacts/contact groups-->
+                            <br /><br />
+                            <div class="ui toggle checkbox">
+                                <input type="checkbox" />
+                                <label>Include this tool</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two column row">
+                        <div class="left aligned column">
+                            <a id="cancel" class="ui labeled icon huge secondary button">
+                                <i class="remove icon"></i>
+                                Cancel
+                            </a>
+                        </div>
                         <div class="right aligned column">
-                            <a class="ui huge blue button" href="../World Builder/WorldBuilder.html">
+                            <a class="ui huge blue button" href="../Workbench/Workbench.html">
                                 Continue
                             </a>
+                        </div>
+                    </div>
+                    <div id="cancelModal" class="ui basic modal">
+                        <div class="content">
+                            Are you sure? Any unsaved changes will be lost...
+                        </div>
+                        <div class="actions">
+                            <div class="ui two fluid buttons">
+                                <div class="ui red basic inverted labeled icon button">
+                                    <i class="remove icon"></i>
+                                    No
+                                </div>
+                                <a class="ui green basic inverted labeled icon button" href="..\Game.html">
+                                    <i class="checkmark icon"></i>
+                                    Yes
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

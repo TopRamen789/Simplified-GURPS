@@ -405,5 +405,5 @@ $(document).ready(function () {
 	        }
 	    }
 
-	}, 100);
+	}, 5000);
 });

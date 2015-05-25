@@ -1,0 +1,14 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <svg id="svg_1" height="60" width="40">
+   <g transform="scale(0.1 -0.1) translate(110.0 -370.0)">
+    <path fill=" #000000" d="m142,126.171883l-9.765625,-78.218754l-55.765625,-52.843759l-55.765619,52.843759l-9.765631,78.218754l131.0625,0l0,0m-11.046875,-9.765633l-108.984375,0l8.015631,-63.765621l46.484369,-44.046879l46.484383,44.046879l7.999992,63.765621"/>
+   </g>
+  </svg>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <use x="-10.875" y="-23.249999" transform="matrix(2.6666667461395264,0,0,2.6666667461395264,0,0) " id="svg_2" xlink:href="#svg_1"/>
+ </g>
+</svg>

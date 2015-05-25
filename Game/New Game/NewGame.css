@@ -1,0 +1,14 @@
+﻿.ui.toggle.checkbox.restricted input[type="checkbox"]:checked ~ .box,
+.ui.toggle.checkbox.restricted input[type="checkbox"]:checked ~ label
+{
+  color: #d95c5c;
+}
+.ui.toggle.checkbox.restricted input[type="checkbox"]:checked ~ .box:before,
+.ui.toggle.checkbox.restricted input[type="checkbox"]:checked ~ label:before
+ {
+  background-color: #d95c5c;
+}
+
+.ui.grid.skills > .row {
+    padding-bottom: .3rem;
+}

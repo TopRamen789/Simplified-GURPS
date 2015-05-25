@@ -1,0 +1,61 @@
+﻿/*.ui.side-tabs.tabular.menu .item:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}*/
+
+.ui.side-tabs.tabular.menu {
+  background-color: transparent;
+  border-radius: 0em;
+  box-shadow: none !important;
+  border-bottom: none;
+}
+
+.ui.side-tabs.tabular.menu .item {
+  background-color: transparent;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.ui.tabular.menu .active.item {
+  position: relative;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.8);
+  border-color: #d4d4d5;
+  font-weight: bold;
+  margin-bottom: -1px;
+  border-right: none;
+  box-shadow: 0px 2px 0px -1px #ffffff;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden;
+  /*padding:0;*/
+}
+
+/* Coupling with segment for attachment */
+
+.ui.leftside.segment.attached + .ui.leftside.segment.attached:not(.top) {
+  border-top: 1px solid transparent;
+  border-top-color: #d4d4d5;
+  overflow: hidden;
+  /*padding: 0;*/
+}
+
+#leftColumn {
+    padding-right: 0;
+}
+
+#righttColumn {
+    padding-left: 0;
+}
+/*
+.ui.segment.gray {
+    background-color: #d0d0d0;
+}
+
+.darkGray {
+    background-color: #aaaaaa;
+}
+*/

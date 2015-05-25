@@ -5,8 +5,9 @@
 	<link href="..\..\Semantic-UI-1.8.1\dist\semantic.min.css" type="text/css" rel="stylesheet"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="..\..\Semantic-UI-1.8.1\dist\semantic.min.js" type="text/javascript"></script>
-    <script src="..\..\scripts.js" type="text/javascript"></script>
-    <link href="createStyles.css" type="text/css" rel="stylesheet"/>
+    <script src="..\..\semanticScripts.js" type="text/javascript"></script>
+    <script src="NewGame.js" type="text/javascript"></script>
+    <link href="NewGame.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -17,501 +18,678 @@
 			</a>
 		</div>
 	</div>
-    <!--This page needs better styling, soooo badly-->
 	<div class="ui center aligned stackable grid">
 		<div class="center aligned twelve wide column">
 			<div class="ui segment">
-				<h1 class="header segment">
-					Welcome!
+                <h1 class="header segment">
+					New Game
 				</h1>
-                <div class="ui divider"></div>
+                <br />
+                <div class="ui top attached fluid four item labeled icon tabular steps menu">
+                    <a class="active item step" data-tab="1">
+                        <i class="settings icon"></i>
+                        General Settings
+                    </a>
+                    <a class="item step" data-tab="2">
+                        <i class="lab icon"></i>
+                        Science & Magic
+                    </a>
+                    <a class="item step" data-tab="3">
+                        <i class="users icon"></i>
+                        Characters
+                    </a>
+                    <a class="disabled item step" data-tab="4">
+                        <i class="list icon"></i>
+                        Review
+                    </a>
+                </div>
+                <div class="ui bottom attached active tab segment" data-tab="1">
+                    <div class="ui grid">
+                        <br />
+                        <h1 class="ui dividing header">
+                            General Settings
+                        </h1>
+                        <div class="three column row">
+                            <div class="column">
+                                <h4 class="ui dividing header">Campaign Name</h4>
+                                Lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum, lorem ipsum lorem ipsum!
+                                <br /><br />
+                                <div class="ui input">
+                                    <input type="text" placeholder="Campaign Name" />
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h4 class="ui dividing header">Campaign Type</h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui secondary button dropdown item">
+                                        <div class="text">Campaign Type</div>
+                                        <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">Serious</div>
+                                        <div class="item" data-value="1">Humorous</div>
+                                        <div class="item" data-value="2">Puzzles and Mystery</div>
+                                        <div class="item" data-value="3">Combat and Adventure</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h4 class="ui dividing header">Campaign Setting</h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui secondary button dropdown item">
+                                        <div class="text">Campaign Setting</div>
+                                        <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">Earth-Like</div>
+                                        <div class="item" data-value="1">Custom Planet</div>
+                                        <div class="item" data-value="2">
+                                            <i class="dropdown icon"></i>
+                                            <span class="text">Space</span>
+                                            <div class="menu">
+                                                <div class="item">Solar System</div>
+                                                <div class="item">Galaxy</div>
+                                                <div class="item">Inter-Galactic</div>
+                                            </div>
+                                        </div>
+                                        <div class="item" data-value="3">
+                                            <i class="dropdown icon"></i>
+                                            <span class="text">Closed-Environment</span>
+                                            <div class="menu">
+                                                <div class="item">Spaceship</div>
+                                                <div class="item">Office Building</div>
+                                                <div class="item">Hunger Games</div>
+                                            </div>
+                                        </div>
+                                        <div class="item" data-value="4">Planes Of Existence</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:150px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="2">
+                    <div class="ui grid">
+                        <br />
+                        <h1 class="ui dividing header">
+                            Science & Magic
+                        </h1>
+                        <h3 class="ui left aligned header">Science</h3>
+                        <div class="ui two column row">
+                            <div class="column">
+                                <h4 class="ui dividing header">
+                                    Power
+                                </h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui dropdown button">
+                                    <div class="default text">Tech Level</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">TL0
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="1">TL1
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="2">TL2
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="3">TL3
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="4">TL4
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="5">TL5
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="6">TL6
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="7">TL7
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="8">TL8
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="9">TL9
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="10">TL10
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="11">TL11
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="12">TL12
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h4 class="ui dividing header">
+                                    Transport
+                                </h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui dropdown button">
+                                    <div class="default text">Tech Level</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">TL0
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="1">TL1
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="2">TL2
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="3">TL3
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="4">TL4
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="5">TL5
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="6">TL6
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="7">TL7
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="8">TL8
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="9">TL9
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="10">TL10
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="11">TL11
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="12">TL12
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui two column row">
+                            <div class="column">
+                                <h4 class="ui dividing header">
+                                    Medicine
+                                </h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui dropdown button">
+                                    <div class="default text">Tech Level</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">TL0
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="1">TL1
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="2">TL2
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="3">TL3
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="4">TL4
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="5">TL5
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="6">TL6
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="7">TL7
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="8">TL8
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="9">TL9
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="10">TL10
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="11">TL11
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="12">TL12
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h4 class="ui dividing header">
+                                    Weapons & Armor
+                                </h4>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui dropdown button">
+                                    <div class="default text">Tech Level</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">TL0
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="1">TL1
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="2">TL2
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="3">TL3
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="4">TL4
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="5">TL5
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="6">TL6
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="7">TL7
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="8">TL8
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="9">TL9
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="10">TL10
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="11">TL11
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="12">TL12
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3 class="ui left aligned header">Magic</h3>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui blue button dropdown item">
+                                    <div class="text">Mana Extent</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item" data-value="0">Level 0
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="1">Level 1
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="2">Level 2
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="3">Level 3
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                        <div class="item" data-value="4">Level 4
+                                            <i class="circle help icon" data-content="Basically no mana"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="height:150px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="3">
+                    <div class="ui grid">
+                        <br />
+                        <h1 class="ui dividing header">
+                            Characters
+                        </h1>
+                        <div class="two column row">
+                            <div class="column">
+                                <h3 class="ui dividing header">
+                                    Advantages
+                                </h3>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui grid">
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Insubstantiality</b>
+                                        </div>
+                                        <div class="column">        
+                                            <div class="ui toggle checkbox restricted">
+                                                <input type="checkbox" />
+                                                <label>Restricted</label>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui toggle checkbox">
+                                                <input type="checkbox" />
+                                                <label>Expected</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h3 class="ui dividing header">
+                                    Disadvantages
+                                </h3>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui grid">
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Hemophilia</b>
+                                        </div>
+                                        <div class="column">        
+                                            <div class="ui toggle checkbox restricted">
+                                                <input type="checkbox" />
+                                                <label>Restricted</label>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui toggle checkbox">
+                                                <input type="checkbox" />
+                                                <label>Expected</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Kleptomaniac</b>
+                                        </div>
+                                        <div class="column">        
+                                            <div class="ui toggle checkbox restricted">
+                                                <input type="checkbox" />
+                                                <label>Restricted</label>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui toggle checkbox">
+                                                <input type="checkbox" />
+                                                <label>Expected</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui column row">
+                            <div class="column">
+                                <h3 class="ui dividing header">
+                                    Skills
+                                </h3>
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                <br /><br />
+                                <div class="ui grid skills">
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Broadsword</b>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui red label">Restricted</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui label">Expected</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Acrobatics</b>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui red label">Restricted</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui label">Expected</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="three column row">
+                                        <div class="column">
+                                            <b>Mercantilism</b>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui red label">Restricted</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui labeled input" style="width: 175px">
+                                                <div class="ui label">Expected</div>
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="height:150px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab left aligned segment" data-tab="4">
+                    <h1 class="ui dividing header">
+                        Review
+                    </h1>
+                    Let's review before you continue...
+                    <br />
+                    <h3 class="ui dividing header">
+                        General Settings
+                    </h3>
+                    Mike's Game<br />
+                    Serious<br />
+                    Fantasy Epic<br />
+                    <h3 class="ui dividing header">
+                        Science & Magic
+                    </h3>
+                    Power: TL5<br />
+                    Transport: TL5<br />
+                    Medicine: TL5<br />
+                    Weapons & Armor: TL5<br />
+                    <h3 class="ui dividing header">
+                        Characters
+                    </h3>
+                </div>
                 <br />
                 <div class="ui grid">
-                    <div class="ui ordered steps">
-                        <!--completed step-->
-                        <div id="General" class="active step">
-                            <div class="content">
-                                <div class="title">General Settings</div>
-                                <div class="description">Choose your World's General Settings</div>
-                            </div>
-                        </div>
-                        <div id="MagicAndScience" class="disabled step">
-                            <div class="content">
-                                <div class="title">Magic and Science</div>
-                                <div class="description">Choose levels of Magic and Science</div>
-                            </div>
-                        </div>
-                        <div id="Characters" class="disabled step">
-                            <div class="content">
-                                <div class="title">Characters</div>
-                                <div class="description">Choose Expectations and Restrictions</div>
-                            </div>
-                        </div>
-                        <!--<div id="Save" class="disabled step">
-                            <div class="content">
-                                <div class="title">Save</div>
-                                <div class="description">You're ready to select tools!</div>
-                            </div>
-                        </div>-->
-                    </div>
-                    <h1 class="ui dividing header">
-                        General Settings
-                    </h1>
-                    <div class="three column row">
-                        <div class="column">
-                            <div class="ui input">
-                                <input type="text" placeholder="Campaign Name" />
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui secondary button dropdown item">
-                                    <div class="text">Campaign Type</div>
-                                    <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item" data-value="0">Serious</div>
-                                    <div class="item" data-value="1">Humorous</div>
-                                    <div class="item" data-value="2">Puzzles and Mystery</div>
-                                    <div class="item" data-value="3">Combat and Adventure</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui secondary button dropdown item">
-                                    <div class="text">Campaign Setting</div>
-                                    <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item" data-value="0">Earth-Like</div>
-                                    <div class="item" data-value="1">Custom Planet</div>
-                                    <div class="item" data-value="2">
-                                        <i class="dropdown icon"></i>
-                                        <span class="text">Space</span>
-                                        <div class="menu">
-                                            <div class="item">Solar System</div>
-                                            <div class="item">Galaxy</div>
-                                            <div class="item">Inter-Galactic</div>
-                                        </div>
-                                    </div>
-                                    <div class="item" data-value="3">
-                                        <i class="dropdown icon"></i>
-                                        <span class="text">Closed-Environment</span>
-                                        <div class="menu">
-                                            <div class="item">Spaceship</div>
-                                            <div class="item">Office Building</div>
-                                            <div class="item">Hunger Games</div>
-                                        </div>
-                                    </div>
-                                    <div class="item" data-value="4">Planes Of Existence</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h1 class="ui dividing header">
-                        Science and Magic
-                    </h1>
-                    <div class="three column row">
-                        <div class="column">
-                            <div class="ui teal medium button">Default Tech Levels
-                                <div class="ui modal">
-                                    <i class="close icon"></i>
-                                    <div class="header">
-                                        Default Tech Levels
-                                    </div>
-                                    <div class="content">
-                                        <div class="description">
-                                            <div class="ui grid">
-                                                <div class="eight wide column">
-                                                    <div class="ui header">Power</div>
-                                                    <div class="ui search dropdown item">
-                                                        <input type="hidden" name="gender" />
-                                                            <div class="default text">Tech Level</div>
-                                                            <i class="dropdown icon"></i>
-                                                        <div class="menu">
-                                                            <div class="item" data-value="0">TL0
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="1">TL1
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="2">TL2
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="3">TL3
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="4">TL4
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="5">TL5
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="6">TL6
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="7">TL7
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="8">TL8
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="9">TL9
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="10">TL10
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="11">TL11
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="12">TL12
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ui header">Transport</div>
-                                                    <div class="ui search dropdown item">
-                                                        <input type="hidden" name="gender" />
-                                                            <div class="default text">Tech Level</div>
-                                                            <i class="dropdown icon"></i>
-                                                        <div class="menu">
-                                                            <div class="item" data-value="0">TL0
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="1">TL1
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="2">TL2
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="3">TL3
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="4">TL4
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="5">TL5
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="6">TL6
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="7">TL7
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="8">TL8
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="9">TL9
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="10">TL10
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="11">TL11
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="12">TL12
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="eight wide column">
-                                                    <div class="ui header">Medicine</div>
-                                                    <div class="ui search dropdown item">
-                                                        <input type="hidden" name="gender" />
-                                                            <div class="default text">Tech Level</div>
-                                                            <i class="dropdown icon"></i>
-                                                        <div class="menu">
-                                                            <div class="item" data-value="0">TL0
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="1">TL1
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="2">TL2
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="3">TL3
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="4">TL4
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="5">TL5
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="6">TL6
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="7">TL7
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="8">TL8
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="9">TL9
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="10">TL10
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="11">TL11
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="12">TL12
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ui header">Weapons & Armor</div>
-                                                    <div class="ui search dropdown item">
-                                                        <input type="hidden" name="gender" />
-                                                            <div class="default text">Tech Level</div>
-                                                            <i class="dropdown icon"></i>
-                                                        <div class="menu">
-                                                            <div class="item" data-value="0">TL0
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="1">TL1
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="2">TL2
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="3">TL3
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="4">TL4
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="5">TL5
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="6">TL6
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="7">TL7
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="8">TL8
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="9">TL9
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="10">TL10
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="11">TL11
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                            <div class="item" data-value="12">TL12
-                                                                <i class="circle help icon" data-content="Basically no mana"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui blue button dropdown item">
-                                <div class="text">Mana Extent</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item" data-value="0">Level 0
-                                        <i class="circle help icon" data-content="Basically no mana"></i>
-                                    </div>
-                                    <div class="item" data-value="1">Level 1
-                                        <i class="circle help icon" data-content="Basically no mana"></i>
-                                    </div>
-                                    <div class="item" data-value="2">Level 2
-                                        <i class="circle help icon" data-content="Basically no mana"></i>
-                                    </div>
-                                    <div class="item" data-value="3">Level 3
-                                        <i class="circle help icon" data-content="Basically no mana"></i>
-                                    </div>
-                                    <div class="item" data-value="4">Level 4
-                                        <i class="circle help icon" data-content="Basically no mana"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h1 class="ui dividing header">
-                        Characters
-                    </h1>
-                    <div class="six column row">
-                        <div class="column">
-                            <div class="ui teal segment">
-                                <h3 class="ui header">Expectations</h3>
-                                <div class="ui vertical buttons">
-                                    <div class="ui teal button">
-                                        Advantages
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Advantages
-                                            </div>
-                                            <div class="content">
-                                                <div class="description">
-                                                    <div class="ui toggle checkbox">
-                                                        <input type="checkbox" />
-                                                        <label>Insubstantiality</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ui teal button disadvantages">
-                                        Disadvantages
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Disadvantages
-                                            </div>
-                                            <div class="content">
-                                                <div class="description">
-                                                    <div class="ui right aligned basic segment">
-                                                        <div class="ui toggle checkbox">
-                                                            <input type="checkbox" />
-                                                            <label>Hemophilia</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ui teal button">
-                                        Skills
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Skills
-                                            </div>
-                                            <div class="content">
-                                                <div class="ui grid">
-                                                    <div class="four wide column">
-                                                        <div class="ui labeled input" style="width: 175px">
-                                                            <div class="ui label">Broadsword</div>
-                                                            <input type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="column">
-                                                        <i class="large circle help icon" data-content="Swing a sword!" data-variation="large"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui red segment">
-                                <h3 class="ui header">Restrictions</h3>
-                                <div class="ui vertical buttons">
-                                    <div class="ui red button">
-                                        Advantages
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Advantages
-                                            </div>
-                                            <div class="content">
-                                                <div class="description">
-                                                    <div class="ui toggle checkbox">
-                                                        <input type="checkbox" />
-                                                        <label>Insubstantiality</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ui red button disadvantages">
-                                        Disadvantages
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Disadvantages
-                                            </div>
-                                            <div class="content">
-                                                <div class="description">
-                                                    <div class="ui toggle checkbox">
-                                                        <input type="checkbox" />
-                                                        <label>Hemophilia</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ui red button">
-                                        Skills
-                                        <div class="ui modal">
-                                            <i class="close icon"></i>
-                                            <div class="header">
-                                                Skills
-                                            </div>
-                                            <div class="content">
-                                                <div class="ui grid">
-                                                    <div class="four wide column">
-                                                        <div class="ui labeled input" style="width: 175px">
-                                                            <div class="ui label">Broadsword</div>
-                                                            <input type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="column">
-                                                        <i class="large circle help icon" data-content="Swing a sword!" data-variation="large"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="four wide column">
-                            <div class="ui blue segment">
-                                <h3 class="ui header">
-                                    Starting Characters
-                                </h3>
-                                <div class="ui labeled input">
-                                    <div class="ui blue label">
-                                        Power
-                                    </div>
-                                    <input type="text" placeholder="Power Level" />
-                                </div>
-
-                                <div class="ui labeled input">
-                                    <div class="ui blue label">
-                                        Money
-                                    </div>
-                                    <input type="text" placeholder="Money" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui divider"></div>
                     <div class="two column row">
-                        <div class="column">
-                            <a class="ui huge secondary labeled icon button" href="../Game.html">
+                        <div class="left aligned column">
+                            <a id="cancel" class="ui labeled icon huge secondary button">
                                 <i class="remove icon"></i>
                                 Cancel
                             </a>
                         </div>
                         <div class="right aligned column">
-                            <a class="ui huge primary labeled icon button" href="../Toolbox/Toolbox.html">
-                                <i class="check icon"></i>
-                                Save
+                            <a id="continue" class="ui huge primary button"> <!--href="..\Toolbox\Toolbox.html"-->
+                                Continue
                             </a>
                         </div>
                     </div>
                 </div>
+                <div id="cancelModal" class="ui basic modal">
+                    <div class="content">
+                        Are you sure? Any unsaved changes will be lost...
+                    </div>
+                    <div class="actions">
+                        <div class="ui two fluid buttons">
+                            <div class="ui red basic inverted labeled icon button">
+                                <i class="remove icon"></i>
+                                No
+                            </div>
+                            <a class="ui green basic inverted labeled icon button" href="..\Game.html">
+                                <i class="checkmark icon"></i>
+                                Yes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Make sense to make another tab?-->
+                <!--<div id="reviewModal" class="ui fullscreen modal">
+                        <div class="header">
+                            Review
+                        </div>
+                        <div class="content">
+                            Are you sure you wish to continue?
+                            <br />
+                            Review your changes here:
+                            <h3 class="dividing header">
+                                General Settings
+                            </h3>
+                            Mike's Game<br />
+                            Serious<br />
+                            Fantasy Epic<br />
+                            <h3 class="dividing header">
+                                Science & Magic
+                            </h3>
+                            Power: TL5<br />
+                            Transport: TL5<br />
+                            Medicine: TL5<br />
+                            Weapons & Armor: TL5<br />
+                            <h3 class="dividing header">
+                                Characters
+                            </h3>
+
+                        </div>
+                        <div class="actions">
+                            <div class="ui two fluid buttons">
+                                <div class="ui red inverted labeled icon button">
+                                    <i class="remove icon"></i>
+                                    No
+                                </div>
+                                <a class="ui green inverted labeled icon button" href="..\Toolbox\Toolbox.html">
+                                    <i class="checkmark icon"></i>
+                                    Yes
+                                </a>
+                            </div>
+                        </div>
+                    </div>-->
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<!--
+<div class="ui steps">
+    <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+            <div class="title"></div>
+            <div class="description"></div>
+        </div>
+    </div>
+    <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+            <div class="title"></div>
+            <div class="description"></div>
+        </div>
+    </div>
+    <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+            <div class="title"></div>
+        </div>
+    </div>
+</div>
+-->
